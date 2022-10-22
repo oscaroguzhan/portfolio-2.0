@@ -46,3 +46,9 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
   @tailwind base;
   @tailwind components;
   @tailwind utilities;
+
+    @layer components {
+      .className {
+        @apply css 
+      }
+    }

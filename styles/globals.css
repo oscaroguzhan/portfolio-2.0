@@ -5,8 +5,10 @@
 /* ADD local own utility classes */
 @layer components {
   .buttonHero {
-    @apply 
-    text-gray-400 px-7 py-3 border border-[#545252] rounded-full ml-4 uppercase 
+    @apply text-gray-400 px-7 py-3 border border-[#545252] rounded-full ml-4 uppercase 
     cursor-pointer tracking-wider hover:border-[#cfc9c9] hover:text-white;
+  }
+  .subtitle {
+    @apply absolute top-24 uppercase tracking-[12px] text-4xl text-gray-500 text-center py-20;
   }
 }

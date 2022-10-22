@@ -61,6 +61,7 @@ export default function Header({}: Props) {
         transition={{
           duration: 1.5,
         }}
+        
       >
         {/* contact */}
         <SocialIcon className="cursor-pointer " network="email" />
