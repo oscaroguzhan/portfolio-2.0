@@ -12,6 +12,7 @@ function Skills({}: Props) {
   md:text-left max-w-[2000px] justify-center items-center mx-auto
   xl:flex-row xl:px-10
   "
+
     >
       <h3 className="subtitle">Skills</h3>
       <h3 className="tracking-[3px] absolute uppercase text-gray-400 top-60 text-sm">
