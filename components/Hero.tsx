@@ -33,7 +33,8 @@ export default function Hero({}: Props) {
           <Cursor cursorColor="white" />
         </h1>
       </div>
-      <div>
+      <div className="flex justify-center w-[400px]
+      flex-col gap-3 md:flex-row lg:flex-row">
         <Link href="#skills">
           <button className="buttonHero">Skills</button>
         </Link>
@@ -45,6 +46,9 @@ export default function Hero({}: Props) {
         </Link>
         <Link href="#projects">
           <button className="buttonHero">Projects</button>
+        </Link>
+        <Link href="#contact">
+          <button className="buttonHero">Contact</button>
         </Link>
       </div>
     </div>

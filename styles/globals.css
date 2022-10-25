@@ -11,4 +11,8 @@
   .subtitle {
     @apply absolute top-24 uppercase tracking-[12px] text-4xl text-gray-500 text-center py-20;
   }
+  .inputContact {
+    @apply bg-slate-400/30 outline-none px-6 py-4 rounded-sm text-slate-400 text-lg
+    focus:border-yellow-200 focus:text-yellow-200 hover:border-yellow-400
+  }
 }

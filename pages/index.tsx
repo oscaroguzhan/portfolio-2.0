@@ -8,7 +8,8 @@ import WorkExperiences from "../components/WorkExperiences";
 
 export default function Home() {
   return (
-    <div className="bg-[#1c1f33] h-screen text-white snap-y snap-mandatory z-0 overflow-scroll">
+    <div className="bg-[#1c1f33] h-screen text-white snap-y snap-mandatory z-0 overflow-y-scroll overflow-x-hidden">
+  
       <Header />
       <section id="hero" className="snap-start ">
         <Hero />
@@ -31,6 +32,7 @@ export default function Home() {
       <section id="contact" className="snap-start">
         <Contact />
       </section>
+      
     </div>
   );
 }
