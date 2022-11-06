@@ -81,8 +81,8 @@ function Contact({}: Props) {
             placeholder="Message"
           />
           <motion.button
-            initial={{ width: 500 }}
-            whileHover={{ width: 300 }}
+            initial={{ width: 200 }}
+            whileHover={{ width: 500 }}
             transition={{ duration: 0.5 }}
             type="submit"
             className="bg-yellow-400/90 px-3 py-4 outline-none rounded-md

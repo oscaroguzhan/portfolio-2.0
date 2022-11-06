@@ -54,3 +54,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
     }
 
 ** For the contact page i prefer to use [react-hook-form] (https://blog.logrocket.com/react-hook-form-complete-guide/#:~:text=React%20Hook%20Form%20is%20a%20library%20that%20helps,fewer%20lines%20of%20code%20than%20other%20form%20libraries.) package to validate 
+## Sanity backend setup
+ 1. install the cli globally [npm install -g@sanity/cli]
+ 2. [sanity init] to initialize the sanity 
+ Create a project and schemas and put all schemas into one global schema(schema.js)
