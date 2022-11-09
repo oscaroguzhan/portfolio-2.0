@@ -10,6 +10,6 @@ export const fetchExperiences = async () => {
   const experiences: Experience[] = data.experiences;
 
   //check the fetch data
-  //console.log("fetching", experiences);
+  console.log("fetching", experiences);
   return experiences;
 };

@@ -10,6 +10,6 @@ export const fetchProject = async () => {
   const projects: Project[] = data.projects;
 
   //check the fetch data
-  //console.log("fetching", projects);
+  console.log("fetching", projects);
   return projects;
 };

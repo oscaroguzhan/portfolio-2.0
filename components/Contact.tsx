@@ -6,6 +6,7 @@ import {
 } from "@heroicons/react/24/solid";
 import { motion } from "framer-motion";
 import { useForm, SubmitHandler } from "react-hook-form";
+import { PageInfo } from "../typings";
 
 //? Define the types
 type Inputs = {
@@ -14,9 +15,11 @@ type Inputs = {
   subject: string;
   message: string;
 };
-type Props = {};
+type Props = {
+  pageInfo:PageInfo
+};
 
-function Contact({}: Props) {
+function Contact({pageInfo}: Props) {
   // ? use register, handleSubmit from useForm in react-hook-form library
   const {
     register,
@@ -40,15 +43,15 @@ function Contact({}: Props) {
           </h4>
           <div className="flex items-center gap-4 justify-center my-2 tracking-wider text-slate-400">
             <PhoneIcon className="h-8 w-8 text-yellow-500" />
-            <p className="text-2xl ">076 6526126</p>
+            <p className="text-2xl ">{pageInfo.phoneNumber}</p>
           </div>
           <div className="flex items-center gap-4 justify-center my-2 tracking-wider text-slate-400">
             <EnvelopeIcon className="h-8 w-8 text-yellow-500" />
-            <p className="text-2xl ">oscar.w.ergun@gmail.com</p>
+            <p className="text-2xl ">{pageInfo.email}</p>
           </div>
           <div className="flex items-center gap-4 justify-center my-2 tracking-wider text-slate-400">
             <MapPinIcon className="h-8 w-8 text-yellow-500" />
-            <p className="text-2xl ">Ängavångsgatan 115 25 474 Helsingborg</p>
+            <p className="text-2xl ">{pageInfo.address}</p>
           </div>
         </div>
         <form

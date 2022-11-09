@@ -17,7 +17,7 @@ so we get technology _type property as reference
 */
 
 const query = groq`
-[_type == "experience"] {
+*[_type == "experience"] {
     ...,
     technologies[]->
   }

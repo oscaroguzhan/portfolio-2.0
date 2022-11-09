@@ -2,10 +2,13 @@ import React from "react";
 import project1 from "../public/project1.png";
 import Image from "next/image";
 import { motion } from "framer-motion";
-type Props = {};
+import { Project } from "../typings";
+import { urlFor } from "../sanity";
+type Props = {
+  projects: Project[];
+};
 
-function Project({}: Props) {
-  const projects = [1, 2, 3];
+function Projects({ projects }: Props) {
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -16,29 +19,31 @@ function Project({}: Props) {
   "
     >
       <h3 className="subtitle">Projects</h3>
-      <div className="flex relative w-full snap-x snap-mandatory overflow-x-scroll overflow-y-hidden z-20">
-        {projects.map((project, i) => (
+
+      <div className="flex relative w-full snap-x snap-mandatory overflow-x-scroll overflow-y-hidden z-20 mt-20">
+        {projects?.map((project, i) => (
           <div
             className="w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center
-          p-20 md:p-44 h-screen
-          "
+        p-20 md:p-44 h-screen
+        "
             key={i}
           >
-            <motion.div initial={{opacity:0, y:-300}}
-            whileInView={{opacity:1, y:0}}
-            viewport={{once:true}}
-            transition={{duration:1.2}}
-            >
-              <Image src={project1} alt="project1" />
-            </motion.div>
+            <motion.img
+              initial={{ opacity: 0, y: -300 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 1.2 }}
+              src={urlFor(project?.image).url()}
+              className="h-120"
+            />
+
             <div className="space-y-5">
-              <h4 className="text-2xl tracking-widest text-slate-300 text-center">
-                Project {i + 1}{" "}
-              </h4>
-              <p className="text-lg text-center tracking-wide ">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Deserunt ad illum!
+              <p className="text-2xl text-center tracking-wide text-slate-400 ">
+                {project.summary}
               </p>
+              <span className="flex justify-center text-1xl tracking-widest text-blue-300 ">
+                {project.link}
+              </span>
             </div>
           </div>
         ))}
@@ -48,4 +53,4 @@ function Project({}: Props) {
   );
 }
 
-export default Project;
+export default Projects;

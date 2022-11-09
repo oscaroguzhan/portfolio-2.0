@@ -1,11 +1,11 @@
-import { GetStaticProps} from "next";
+import { GetStaticProps } from "next";
 import About from "../components/About";
 import Contact from "../components/Contact";
 import Header from "../components/Header";
 import Hero from "../components/Hero";
 import Projects from "../components/Projects";
 import Skills from "../components/Skills";
-import WorkExperiences from "../components/WorkExperiences";
+import WorkExperience from "../components/WorkExperience";
 import { Experience, PageInfo, Project, Skill, Social } from "../typings";
 import { fetchExperiences } from "../utils/fetchExperiences";
 import { fetchPageInfo } from "../utils/fetchPageInfo";
@@ -26,27 +26,27 @@ type Props = {
 const Home = ({ pageInfo, experiences, skills, projects, socials }: Props) => {
   return (
     <div className="bg-[#1c1f33] h-screen text-white snap-y snap-mandatory z-0 overflow-y-scroll overflow-x-hidden">
-      <Header socials ={socials}/>
+      <Header socials={socials} />
       <section id="hero" className="snap-start ">
-        <Hero />
+        <Hero pageInfo={pageInfo} />
       </section>
       <section id="about" className="snap-center">
-        <About />
+        <About pageInfo={pageInfo} />
       </section>
       {/* // Experience section */}
       <section id="experience" className="snap-center">
-        <WorkExperiences />
+        <WorkExperience experiences={experiences} />
       </section>
       <section id="skills" className="snap-start">
-        <Skills />
+        <Skills skills={skills} />
       </section>
       {/* // Skill section */}
       <section id="projects" className="snap-start">
-        <Projects />
+        <Projects projects={projects} />
       </section>
       {/* //Contact section */}
       <section id="contact" className="snap-start">
-        <Contact />
+        <Contact pageInfo={pageInfo}/>
       </section>
     </div>
   );
@@ -73,7 +73,8 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
       projects,
     },
     //Next.js will attempt to re-generate the page: when a req comes in
-    revalidate:10, 
+    // we can do that by adding revalidate flag
+    revalidate: 10,
     // at most once every 10 sec
   };
 };

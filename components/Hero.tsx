@@ -2,11 +2,14 @@ import { useTypewriter, Cursor } from "react-simple-typewriter";
 import Image from "next/image";
 import profileImg from "../public/oscar1.png";
 import Link from "next/link";
-type Props = {};
-export default function Hero({}: Props) {
+import { PageInfo } from "../typings";
+type Props = {
+  pageInfo: PageInfo;
+};
+export default function Hero({ pageInfo }: Props) {
   const [text, count] = useTypewriter({
     words: [
-      "Hi, This is Oscar",
+      `Hi, This is ${pageInfo?.name}`,
       "Developer-LovesTo-Code.tsx",
       "<ButWantsToLearnMore />",
     ],
@@ -25,7 +28,7 @@ export default function Hero({}: Props) {
         className="relative rounded-full mx-auto object-cover"
       />
       <h2 className="text-lg uppercase text-gray-400 tracking-[10px]">
-        FrontEnd Developer
+        {pageInfo.role}
       </h2>
       <div>
         <h1 className="text-5xl px-10">
@@ -33,8 +36,11 @@ export default function Hero({}: Props) {
           <Cursor cursorColor="white" />
         </h1>
       </div>
-      <div className="flex justify-center w-[400px]
-      flex-col gap-3 md:flex-row lg:flex-row">
+      <div
+        className="flex justify-center w-[400px]
+      flex-col gap-3 md:flex-row lg:flex-row"
+      >
+        {}
         <Link href="#skills">
           <button className="buttonHero">Skills</button>
         </Link>

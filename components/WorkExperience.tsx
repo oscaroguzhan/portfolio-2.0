@@ -1,9 +1,12 @@
 import { motion } from "framer-motion";
+import { Experience } from "../typings";
 import EducationCard from "./EducationCard";
 
-type Props = {};
+type Props = {
+  experiences: Experience[];
+};
 
-export default function WorkExperiences({}: Props) {
+function WorkExperience({ experiences }: Props) {
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -13,12 +16,13 @@ export default function WorkExperiences({}: Props) {
     >
       <h3 className="subtitle">Experience / Education</h3>
       <div className="flex w-full space-x-5 overflow-x-scroll p-10 snap-x snap-mandatory ">
-        <EducationCard />
-        <EducationCard />
-        <EducationCard />
-        <EducationCard />
-        
+        {/* go through and render experience card for each experiences */}
+
+        {experiences?.map((experience,i) => (
+          <EducationCard key={i} experience={experience} />
+        ))}
       </div>
     </motion.div>
   );
 }
+export default WorkExperience;
