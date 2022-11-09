@@ -34,7 +34,7 @@ function Projects({ projects }: Props) {
               viewport={{ once: true }}
               transition={{ duration: 1.2 }}
               src={urlFor(project?.image).url()}
-              className="h-120"
+              className="h-120 md:w-80"
             />
 
             <div className="space-y-5">
