@@ -34,27 +34,40 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 
 ## Code Documentation (Syntax)
+
 1.  npx create-next-app@latest --ts app-name
-2. create tailwindcss (npm install -D tailwindcss postcss autoprefixer) and create config file (npx tailwindcss init -p)
+2.  create tailwindcss (npm install -D tailwindcss postcss autoprefixer) and create config file (npx tailwindcss init -p)
+
     - Add the paths to all of your template files in your in tailwind.config.js (
-        content: [
-    "./pages/**/*.{js,jsx,ts,tsx}",
-    "./components(**/*.{js,jsx,ts,tsx}",
-  ],
-    )
-    - Add tailwind layers into globals.css 
-  @tailwind base;
-  @tailwind components;
-  @tailwind utilities;
+      content: [
+      "./pages/**/*.{js,jsx,ts,tsx}",
+      "./components(**/*.{js,jsx,ts,tsx}",
+      ],
+      )
+    - Add tailwind layers into globals.css
+      @tailwind base;
+      @tailwind components;
+      @tailwind utilities;
 
     @layer components {
-      .className {
-        @apply css 
-      }
+    .className {
+    @apply css
+    }
     }
 
-** For the contact page i prefer to use [react-hook-form] (https://blog.logrocket.com/react-hook-form-complete-guide/#:~:text=React%20Hook%20Form%20is%20a%20library%20that%20helps,fewer%20lines%20of%20code%20than%20other%20form%20libraries.) package to validate 
+\*\* For the contact page i prefer to use [react-hook-form] (https://blog.logrocket.com/react-hook-form-complete-guide/#:~:text=React%20Hook%20Form%20is%20a%20library%20that%20helps,fewer%20lines%20of%20code%20than%20other%20form%20libraries.) package to validate
+
 ## Sanity backend setup
- 1. install the cli globally [npm install -g@sanity/cli]
- 2. [sanity init] to initialize the sanity 
- Create a project and schemas and put all schemas into one global schema(schema.js)
+
+1.  install the cli globally [npm install -g@sanity/cli]
+2.  [sanity init] to initialize the sanity
+    Create a project and schemas and put all schemas into one global schema(schema.js)
+
+# Deploying into Vercel
+
+1.Install the Vercel CLI by running
+
+npm i -g vercel
+
+2.Deploying from CLI
+
