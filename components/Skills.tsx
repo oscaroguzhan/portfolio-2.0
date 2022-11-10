@@ -18,11 +18,11 @@ function Skills({ skills }: Props) {
   "
     >
       <h3 className="subtitle">Skills</h3>
-      <h3 className="tracking-[3px] absolute uppercase text-gray-400 top-60 text-sm mt-20">
+      <h3 className="tracking-[3px] absolute uppercase text-gray-400 top-60 text-sm ">
         Hover over a skill to see proficiency
       </h3>
 
-      <div className="grid grid-cols-4 gap-6 mt-60">
+      <div className="grid grid-cols-4 gap-6 mt-20">
         {skills?.map((skill) => (
           <Skill directionLeft key={skill._id} skill={skill} />
         ))}

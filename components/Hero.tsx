@@ -19,7 +19,7 @@ export default function Hero({ pageInfo }: Props) {
   return (
     <div className="h-screen flex items-center justify-center flex-col space-y-7">
       {/* Background circle */}
-      <div className="relative flex justify-center items-center">
+      <div className="relative flex justify-center items-center mb-40">
         <div className="absolute border [#333333] rounded-full h-[400px] w-[400px] mt-50 top-[30px] animate-ping opacity-50"></div>
       </div>
       <Image
