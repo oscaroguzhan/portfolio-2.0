@@ -32,9 +32,9 @@ function Contact({pageInfo}: Props) {
     The reason i am trying to reach you because of ${data.message} and my email is ${data.email}`);
   return (
     <div className="h-screen relative text-center md:text-left flex items-center justify-center">
-      <h3 className="subtitle">Contact</h3>
+      <h3 className="subtitle ">Contact</h3>
       <div>
-        <div className="flex flex-col mt-40">
+        <div className="flex flex-col mt-60">
           <h4 className="flex flex-col text-center text-3xl tracking-wider my-5">
             I am ready for new challenge...
             <span className="underline decoration-yellow-500 tracking-wider text-3xl">
