@@ -11,7 +11,7 @@ function EducationCard({ experience }: Props) {
   return (
     <article
       className=" flex flex-col rounded-lg items-center space-y-6 flex-shrink-0 w-[500px] md:w-[600px] xl:w-[900px] snap-center p-10 bg-gray-700 
-    opacity-40 hover:opacity-100 transition-opacity duration-200 overflow-hidden"
+    opacity-40 hover:opacity-100 transition-opacity duration-200 overflow-hidden mt-40"
     >
       <motion.img
         initial={{ opacity: 0, y: -100 }}

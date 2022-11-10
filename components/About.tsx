@@ -32,7 +32,7 @@ function About({ pageInfo }: Props) {
         }}
         src={urlFor(pageInfo.profilePic).url()}
         alt="profile picture"
-        className=" -mb-0 w-60 h-60 rounded-full object-cover flex-shrink-0 md:mb-20 
+        className=" -mb-40 w-60 h-60 rounded-full object-cover flex-shrink-0 md:mb-20 
         md:rounded-lg md:w-[400px] md:h-[400px] 
         xl:w-[500px] xl:h-[600px]
         "

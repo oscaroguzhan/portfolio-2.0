@@ -12,7 +12,7 @@ const config = {
 
 // ? Set up the client for fetching data in the getProps page functions
 export const sanityClient = createClient(config);
-
+console.log("check token", process.env.NEXT_PUBLIC_SANITY_PROJECT_ID)
 // we need to define another function to get images from sanity
 const builder = ImageUrlBuilder(config);
 export const urlFor = (source: any) => builder.image(source);
