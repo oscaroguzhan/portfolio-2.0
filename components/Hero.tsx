@@ -17,17 +17,17 @@ export default function Hero({ pageInfo }: Props) {
     delaySpeed: 1500,
   });
   return (
-    <div className="h-screen flex items-center justify-center flex-col space-y-7">
+    <div className="h-screen flex items-center justify-center flex-col space-y-7 text-center overflow-hidden">
       {/* Background circle */}
-      <div className="relative flex justify-center items-center mb-40">
-        <div className="absolute border [#333333] rounded-full h-[400px] w-[400px] mt-50 top-[30px] animate-ping opacity-50"></div>
+      <div className="relative flex justify-center items-center mb-10">
+        <div className="absolute border [#333333] rounded-full h-[400px] w-[400px] mt-20 top-[30px] animate-ping opacity-50"></div>
       </div>
       <Image
         src={profileImg}
         alt="profileImg"
         className="relative rounded-full mx-auto object-cover"
       />
-      <h2 className="text-lg uppercase text-gray-400 tracking-[10px]">
+      <h2 className="text-sm uppercase text-gray-400 tracking-[10px]">
         {pageInfo.role}
       </h2>
       <div>

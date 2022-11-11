@@ -11,7 +11,7 @@ function EducationCard({ experience }: Props) {
   return (
     <article
       className=" flex flex-col rounded-lg items-center space-y-8 flex-shrink-0 w-[500px] md:w-[600px] xl:w-[900px] snap-center p-10 bg-gray-700 
-    opacity-40 hover:opacity-100 transition-opacity duration-200 overflow-hidden mt-20"
+    opacity-40 hover:opacity-100 transition-opacity duration-200 overflow-hidden "
     >
       <motion.img
         initial={{ opacity: 0, y: -100 }}
@@ -20,7 +20,7 @@ function EducationCard({ experience }: Props) {
         viewport={{ once: true }}
         src={urlFor(experience?.logo).url()}
         alt="EC utbildning logo"
-        className="w-32 h-32 rounded-[20px] object-top 
+        className="w-32 h-32 rounded-[20px] object-cover object-center 
         md:w-[150px] md:h-[150px]
         xl:w-[200px] xl:h-[200px]
         "

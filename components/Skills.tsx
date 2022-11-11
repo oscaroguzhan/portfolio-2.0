@@ -12,9 +12,9 @@ function Skills({ skills }: Props) {
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1 }}
-      className="h-screen relative flex flex-col text-center
+      className="min-h-screen relative flex flex-col text-center
   md:text-left max-w-[2000px] justify-center items-center mx-auto
-  xl:flex-row xl:px-10
+  xl:flex-row xl:px-10  xl:space-y-0 
   "
     >
       <h3 className="subtitle">Skills</h3>
@@ -22,7 +22,7 @@ function Skills({ skills }: Props) {
         Hover over a skill to see proficiency
       </h3>
 
-      <div className="grid grid-cols-4 gap-6 mt-20">
+      <div className="grid grid-cols-4 gap-6">
         {skills?.map((skill) => (
           <Skill directionLeft key={skill._id} skill={skill} />
         ))}
