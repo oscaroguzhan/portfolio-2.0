@@ -17,7 +17,7 @@ function Skills({ skills }: Props) {
   xl:flex-row xl:px-10  xl:space-y-0 
   "
     >
-      <h3 className="subtitle">Skills</h3>
+      <h3 className="subtitle -mb-5">Skills</h3>
       <h3 className="tracking-[3px] absolute uppercase text-gray-400 top-60 text-sm ">
         Hover over a skill to see proficiency
       </h3>

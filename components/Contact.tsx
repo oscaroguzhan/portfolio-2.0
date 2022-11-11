@@ -32,7 +32,7 @@ function Contact({pageInfo}: Props) {
     The reason i am trying to reach you because of ${data.message} and my email is ${data.email}`);
   return (
     <div className="h-screen relative text-center md:text-left flex items-center justify-center">
-      <h3 className="subtitle ">Contact</h3>
+      <h3 className="subtitle -mb-5">Contact</h3>
       <div>
         <div className="flex flex-col mt-20">
           <h4 className="flex flex-col text-center text-3xl tracking-wider my-5">
